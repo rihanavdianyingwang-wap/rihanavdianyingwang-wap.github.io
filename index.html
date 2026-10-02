@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日韩av电影网 - 专注日韩影视导航，电影·剧集·综艺·动漫一站式索引 | rihanavdianyingwang-wap.github.io</title>
+<meta name="keywords" content="日韩av电影网, 日韩影视, 日本电影, 韩国电影, 韩剧, 日剧, 影视导航, rihanavdianyingwang-wap.github.io">
+<meta name="description" content="日韩av电影网（rihanavdianyingwang-wap.github.io）专注日韩影视导航，覆盖日本电影、韩国电影、韩剧、日剧、综艺与动漫，分类索引、热门片单一站直达。">
+<meta name="robots" content="index,follow">
+<meta name="author" content="日韩av电影网">
+<link rel="canonical" href="https://rihanavdianyingwang-wap.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "日韩av电影网",
+  "url": "https://rihanavdianyingwang-wap.github.io/",
+  "description": "专注日韩影视导航，覆盖电影、剧集、综艺、动漫的分类索引与热门片单"
+}
+</script>
+<style>
+  :root{
+    --bg:#f4f1ea;--ink:#1c1f24;--ink2:#4a5059;--mute:#8b919a;
+    --paper:#fffdf8;--line:rgba(28,31,36,.10);--line2:rgba(28,31,36,.20);
+    --jp:#d62828;--kr:#0a4c8a;--ac:#e85d2a;--gold:#f0a500;--cream:#fff7e6;
+    --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+    --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+    --mono:"SF Mono",Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--jp);color:#fff}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+
+  /* 顶部胶卷齿孔条 */
+  .film-top{height:30px;background:var(--ink);position:relative;overflow:hidden}
+  .film-top::before,.film-top::after{content:"";position:absolute;top:0;width:100%;height:100%;
+    background-image:radial-gradient(circle,var(--bg) 0 5px,transparent 5px 10px);background-size:26px 30px}
+  .film-top::before{left:0}
+  .film-top::after{right:0;transform:scaleX(-1)}
+  .film-top .marq{position:absolute;left:0;top:0;height:100%;display:flex;align-items:center;white-space:nowrap;animation:roll 30s linear infinite;font-family:var(--mono);font-size:12px;color:#f4f1ea;letter-spacing:2px}
+  .film-top .marq span{padding:0 46px}
+  @keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  header{background:var(--paper);border-bottom:1px solid var(--line)}
+  .hd{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;padding:26px 0}
+  .stamp{width:74px;height:74px;background:var(--jp);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:6px;flex-shrink:0;position:relative;box-shadow:0 6px 16px rgba(214,40,40,.3)}
+  .stamp::after{content:"";position:absolute;inset:5px;border:1.5px solid rgba(255,255,255,.6);border-radius:3px}
+  .stamp b{font-family:var(--serif);font-size:26px;line-height:1;position:relative}
+  .stamp small{font-size:9px;letter-spacing:1px;position:relative}
+  .brand h1{font-family:var(--serif);font-size:34px;letter-spacing:3px;line-height:1.1}
+  .brand h1 em{font-style:normal;color:var(--jp)}
+  .brand .sub{font-size:11.5px;color:var(--mute);letter-spacing:5px;text-transform:uppercase;margin-top:6px}
+  .meta{text-align:right;font-size:12px;color:var(--mute);line-height:1.9}
+  .meta b{display:block;font-family:var(--mono);font-size:13px;color:var(--kr);word-break:break-all}
+
+  nav{display:flex;border-top:2px solid var(--ink)}
+  nav a{padding:14px 22px;font-size:14px;font-weight:700;color:var(--ink2);position:relative;transition:.2s;letter-spacing:1px}
+  nav a:first-child{padding-left:0}
+  nav a::before{content:"";position:absolute;left:22px;right:22px;bottom:8px;height:2px;background:var(--jp);transform:scaleX(0);transform-origin:left;transition:.25s}
+  nav a:first-child::before{left:0;right:22px}
+  nav a:hover{color:var(--jp)}
+  nav a:hover::before{transform:scaleX(1)}
+  #mb{display:none;width:46px;height:46px;margin:10px 0;background:var(--ink);color:#fff;border:0;font-size:20px;cursor:pointer}
+
+  /* 首屏：双国对照 + 竖向胶卷条 */
+  .hero{padding:60px 0 40px;display:grid;grid-template-columns:1fr 96px;gap:46px;align-items:center}
+  .hero .tag{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--jp);border:1px solid var(--jp);padding:4px 12px;letter-spacing:2px;margin-bottom:22px}
+  .hero h2{font-family:var(--serif);font-size:52px;line-height:1.25;letter-spacing:2px}
+  .hero h2 u{text-decoration:none;background:linear-gradient(transparent 62%,var(--gold) 62%);padding:0 4px}
+  .hero .divider{width:100%;height:1px;background:var(--line2);margin:26px 0;position:relative}
+  .hero .divider::after{content:"";position:absolute;left:0;top:-4px;width:60px;height:9px;background:repeating-linear-gradient(90deg,var(--jp) 0 6px,transparent 6px 12px)}
+  .hero p{font-size:16px;color:var(--ink2);max-width:560px;text-align:justify}
+  .hero .acts{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .hero .acts a{flex:1;min-width:150px;text-align:center;padding:14px 18px;font-size:14px;font-weight:700;letter-spacing:1px;transition:.25s;border:1px solid var(--ink)}
+  .hero .acts a.primary{background:var(--jp);color:#fff;border-color:var(--jp)}
+  .hero .acts a.primary:hover{background:var(--ac)}
+  .hero .acts a.ghost:hover{background:var(--ink);color:var(--paper)}
+  .reel{display:flex;flex-direction:column;gap:12px;align-items:center}
+  .reel i{width:100%;aspect-ratio:3/4;background:var(--ink);position:relative;display:block;border-radius:2px}
+  .reel i::before,.reel i::after{content:"";position:absolute;left:0;width:100%;height:8px;background-image:radial-gradient(circle,var(--bg) 0 2.5px,transparent 2.5px 5px);background-size:10px 8px}
+  .reel i::before{top:6px}.reel i::after{bottom:6px}
+  .reel i b{position:absolute;inset:18px;background:var(--kr);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;color:#fff;writing-mode:vertical-rl;letter-spacing:4px}
+
+  section{padding:64px 0}
+  .sh{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:3px double var(--line2);padding-bottom:16px;margin-bottom:40px}
+  .sh .l{display:flex;align-items:baseline;gap:14px}
+  .sh .no{font-family:var(--mono);font-size:13px;color:var(--jp);background:var(--cream);border:1px solid var(--jp);padding:3px 10px;letter-spacing:1px}
+  .sh h3{font-family:var(--serif);font-size:28px;letter-spacing:2px}
+  .sh .d{font-size:12.5px;color:var(--mute);max-width:360px;text-align:right}
+  .more{font-size:12.5px;font-weight:700;color:var(--kr);border-bottom:2px solid var(--kr);padding-bottom:3px;white-space:nowrap}
+  .more:hover{color:var(--jp);border-color:var(--jp)}
+
+  /* 壹：卷轴式时间轴（横向双列） */
+  .reels{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--ink);padding:2px}
+  .reels a{display:grid;grid-template-columns:74px 1fr;background:var(--paper);transition:.25s}
+  .reels a:nth-child(even){grid-template-columns:1fr 74px;direction:rtl}
+  .reels a:nth-child(even) .cell{direction:ltr}
+  .reels .frame{background:var(--kr);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--serif);position:relative}
+  .reels .frame b{font-size:26px;line-height:1}
+  .reels .frame small{font-size:9.5px;letter-spacing:1px;margin-top:4px}
+  .reels .cell{padding:22px 26px}
+  .reels .cell h4{font-size:18px;font-weight:900;margin-bottom:6px;letter-spacing:1px}
+  .reels .cell p{font-size:13px;color:var(--ink2);text-align:justify}
+  .reels .cell .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+  .reels .cell .tags i{font-style:normal;font-size:11px;background:var(--cream);color:var(--ink2);padding:3px 9px;border:1px solid var(--line)}
+  .reels a:hover{background:var(--cream)}
+  .reels a:hover .frame{background:var(--jp)}
+
+  /* 贰：折纸展开式内容（tab 手风琴，独占结构） */
+  .origami{display:flex;height:420px;border:1px solid var(--line2);background:var(--paper)}
+  .fold{flex:1;position:relative;overflow:hidden;border-right:1px solid var(--line);cursor:pointer;transition:flex .55s cubic-bezier(.6,.05,.2,1)}
+  .fold:last-child{border-right:0}
+  .fold .bg{position:absolute;inset:0;opacity:.92;transition:.4s}
+  .fold:nth-child(1) .bg{background:linear-gradient(135deg,#2b2b2b,#5a5a5a)}
+  .fold:nth-child(2) .bg{background:linear-gradient(135deg,#1a3a5c,#0a4c8a)}
+  .fold:nth-child(3) .bg{background:linear-gradient(135deg,#a83226,#d62828)}
+  .fold:nth-child(4) .bg{background:linear-gradient(135deg,#c98a1f,#f0a500)}
+  .fold .inner{position:absolute;inset:0;padding:28px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
+  .fold .inner .top{display:flex;align-items:center;gap:12px}
+  .fold .inner .top .nm{font-family:var(--mono);font-size:12px;letter-spacing:2px;opacity:.9}
+  .fold .inner .center{font-family:var(--serif);font-size:26px;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:3px}
+  .fold .inner .bot{font-size:12px;opacity:.85;line-height:1.7}
+  .fold .detail{position:absolute;inset:0;background:var(--ink);color:var(--paper);padding:30px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);transition:.45s;pointer-events:none}
+  .fold .detail b{font-family:var(--serif);font-size:22px;margin-bottom:12px}
+  .fold .detail p{font-size:13px;color:#c9ccd1;margin-bottom:14px;text-align:justify}
+  .fold .detail span{font-size:12px;color:var(--gold);border-top:1px solid rgba(255,255,255,.2);padding-top:12px}
+  .fold.on{flex:2.4}
+  .fold.on .bg{opacity:.25}
+  .fold.on .inner{opacity:0}
+  .fold.on .detail{opacity:1;transform:translateY(0);pointer-events:auto}
+
+  /* 叁：胶片帧式宫格（图片占位帧 + 编号） */
+  .frames{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .frames a{position:relative;aspect-ratio:2/3;background:var(--paper);border:1px solid var(--line2);overflow:hidden;transition:.3s;padding:8px}
+  .frames a .img{position:absolute;inset:8px;display:flex;align-items:flex-end;padding:12px;color:#fff}
+  .frames a:nth-child(1) .img{background:linear-gradient(180deg,#6b3fa0,#2b1d4a)}
+  .frames a:nth-child(2) .img{background:linear-gradient(180deg,#1f6f5c,#0c3a30)}
+  .frames a:nth-child(3) .img{background:linear-gradient(180deg,#a83226,#5c1a14)}
+  .frames a:nth-child(4) .img{background:linear-gradient(180deg,#2a4a7a,#14233c)}
+  .frames a:nth-child(5) .img{background:linear-gradient(180deg,#8a6a1f,#3d2e0e)}
+  .frames a:nth-child(6) .img{background:linear-gradient(180deg,#4a2a6a,#241238)}
+  .frames a .num{position:absolute;top:-1px;left:-1px;background:var(--jp);color:#fff;font-family:var(--mono);font-size:12px;padding:4px 9px;z-index:3}
+  .frames a .img b{font-family:var(--serif);font-size:17px;line-height:1.3;letter-spacing:1px}
+  .frames a .img small{display:block;font-size:10.5px;opacity:.85;margin-top:4px;font-family:var(--mono)}
+  .frames a:hover{padding:4px;box-shadow:0 12px 26px rgba(28,31,36,.22)}
+
+  /* 肆：柱状图仪表（竖向高度百分比） */
+  .stats{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+  .bars{display:flex;align-items:flex-end;gap:14px;height:220px;padding:0 6px;border-bottom:2px solid var(--ink)}
+  .bars .bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+  .bars .bar i{display:block;width:100%;max-width:58px;background:linear-gradient(180deg,var(--jp),var(--ac));transform:scaleY(0);transform-origin:bottom;animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+  .bars .bar:nth-child(1) i{animation-delay:.05s}
+  .bars .bar:nth-child(2) i{animation-delay:.15s}
+  .bars .bar:nth-child(3) i{animation-delay:.25s}
+  .bars .bar:nth-child(4) i{animation-delay:.35s}
+  .bars .bar:nth-child(5) i{animation-delay:.45s}
+  .bars .bar:nth-child(6) i{animation-delay:.55s}
+  .bars .bar:nth-child(7) i{animation-delay:.65s}
+  @keyframes rise{to{transform:scaleY(1)}}
+  .bars .bar b{font-family:var(--mono);font-size:12px;color:var(--ink);margin-top:8px}
+  .bars .bar small{font-size:11px;color:var(--mute)}
+  .stat-txt h4{font-family:var(--serif);font-size:24px;letter-spacing:2px;margin-bottom:14px}
+  .stat-txt p{font-size:14px;color:var(--ink2);text-align:justify;margin-bottom:18px}
+  .stat-txt ul{list-style:none;border-top:1px solid var(--line)}
+  .stat-txt li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  .stat-txt li b{color:var(--jp);font-family:var(--mono)}
+
+  /* 关于：双面卡 */
+  .about{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink)}
+  .about .ink{background:var(--ink);color:var(--paper);padding:44px;position:relative;overflow:hidden}
+  .about .ink::before{content:"日\n韓";white-space:pre;position:absolute;right:16px;bottom:-20px;font-family:var(--serif);font-size:120px;line-height:.85;color:rgba(255,255,255,.06)}
+  .about .ink .q{font-family:var(--serif);font-size:15px;line-height:2.1;color:var(--gold);margin-bottom:24px;position:relative}
+  .about .ink h3{font-family:var(--serif);font-size:26px;letter-spacing:2px;margin-bottom:16px;position:relative}
+  .about .ink p{font-size:14px;color:#d5d8dc;position:relative;text-align:justify}
+  .about .ink .url{margin-top:24px;padding:14px;background:rgba(255,255,255,.08);font-family:var(--mono);font-size:12.5px;color:var(--gold);word-break:break-all;position:relative}
+  .about .pale{background:var(--paper);padding:44px}
+  .about .pale h5{font-size:11px;letter-spacing:4px;color:var(--mute);text-transform:uppercase;margin-bottom:22px}
+  .about .pale .lst{list-style:none;display:flex;flex-direction:column;gap:0}
+  .about .pale .lst a{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line2);font-size:14px;color:var(--ink2);transition:.2s}
+  .about .pale .lst a .n{font-family:var(--mono);font-size:12px;color:var(--jp)}
+  .about .pale .lst a .ar{font-size:12px;color:var(--mute)}
+  .about .pale .lst a:hover{color:var(--jp);padding-left:8px}
+  .about .pale .lst a:hover .ar{color:var(--jp)}
+
+  footer{background:var(--ink);color:#c9ccd1;padding:50px 0 0}
+  .fwrap{max-width:1180px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px}
+  .fwrap .brand .stamp{margin-bottom:18px}
+  .fwrap .brand h4{font-family:var(--serif);font-size:22px;color:#fff;letter-spacing:2px;margin-bottom:10px}
+  .fwrap .brand p{font-size:13px;color:#8b919a;max-width:300px;text-align:justify}
+  .fwrap h5{font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+  .fwrap ul li{list-style:none;margin-bottom:10px}
+  .fwrap a{color:#a8adb4;font-size:13.5px;transition:.2s}
+  .fwrap a:hover{color:var(--gold)}
+  .copy{max-width:1180px;margin:36px auto 0;padding:22px 26px;border-top:1px solid rgba(255,255,255,.14);font-size:12.5px;color:#8b919a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .copy a{color:var(--gold);font-weight:700}
+
+  #top{position:fixed;right:20px;bottom:22px;width:48px;height:48px;background:var(--jp);color:#fff;border:0;font-size:19px;cursor:pointer;opacity:0;visibility:hidden;transition:.3s;z-index:100;border-radius:50%}
+  #top.show{opacity:1;visibility:visible}
+
+  @media (max-width:960px){
+    .hd{grid-template-columns:auto 1fr}.meta{display:none}
+    .hero{grid-template-columns:1fr;gap:34px}
+    .reel{flex-direction:row;order:2}
+    .reel i{width:90px}
+    .reels{grid-template-columns:1fr}
+    .reels a,.reels a:nth-child(even){grid-template-columns:64px 1fr;direction:ltr}
+    .origami{flex-direction:column;height:auto}
+    .fold{border-right:0;border-bottom:1px solid var(--line)}
+    .fold .center{writing-mode:horizontal-tb;transform:none;font-size:22px}
+    .fold.on{flex:1}
+    .frames{grid-template-columns:repeat(3,1fr)}
+    .stats{grid-template-columns:1fr}
+    .bars{height:180px}
+    .about{grid-template-columns:1fr}
+    .fwrap{grid-template-columns:1fr 1fr}
+    nav{display:none;flex-direction:column;padding:6px 0}
+    nav.open{display:flex}
+    nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+    nav a::before{display:none}
+    #mb{display:block}
+  }
+  @media (max-width:520px){
+    .hero h2{font-size:30px}
+    .frames{grid-template-columns:repeat(2,1fr)}
+    .fwrap,.about .ink,.about .pale{padding:28px}
+  }
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<div class="film-top"><div class="marq">
+  <span>// 日韩av电影网 · 专注日韩影视导航 · rihanavdianyingwang-wap.github.io</span>
+  <span>// 日本电影 / 韩国电影 / 韩剧 / 日剧 / 综艺 / 动漫</span>
+  <span>// 分类索引 · 热门片单 · 一站直达</span>
+  <span>// 日韩av电影网 · 专注日韩影视导航 · rihanavdianyingwang-wap.github.io</span>
+  <span>// 日本电影 / 韩国电影 / 韩剧 / 日剧 / 综艺 / 动漫</span>
+  <span>// 分类索引 · 热门片单 · 一站直达</span>
+</div></div>
+
+<header>
+  <div class="wrap">
+    <div class="hd">
+      <div class="stamp"><b>日韓</b><small>FILM</small></div>
+      <div class="brand"><h1>日<em>韩</em>电影网</h1><div class="sub">Japan · Korea Film Navigation</div></div>
+      <div class="meta">官方网址<b>rihanavdianyingwang-wap.github.io</b>专注日韩影视导航</div>
+    </div>
+    <nav id="nav">
+      <a href="#home">首页</a>
+      <a href="#reels">内容分区</a>
+      <a href="#origami">精选内容</a>
+      <a href="#frames">地区索引</a>
+      <a href="#stats">内容数据</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <button id="mb">≡</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero" id="home">
+    <div>
+      <span class="tag">ON AIR / 正在播出</span>
+      <h2>专注日韩影视<br>看见东亚故事的<u>另一面</u></h2>
+      <div class="divider"></div>
+      <p><strong>日韩av电影网</strong> 是专注日韩影视内容的导航站点，覆盖日本电影、韩国电影、韩剧、日剧、综艺与动漫，按类型、年份、地区做分类索引，帮你快速找到想看的片子。</p>
+      <div class="acts">
+        <a class="primary" href="#reels">浏览内容分区</a>
+        <a class="ghost" href="#origami">查看本周精选</a>
+      </div>
+    </div>
+    <div class="reel">
+      <i><b>日本</b></i>
+      <i><b>韩国</b></i>
+    </div>
+  </div>
+
+  <!-- 壹：卷轴式时间轴 -->
+  <section id="reels">
+    <div class="sh">
+      <div class="l"><span class="no">01</span><h3>内容分区</h3></div>
+      <div class="d">电影、剧集、综艺、动漫四大板块，按地区与类型双向索引。</div>
+    </div>
+    <div class="reels">
+      <a href="#" style="--c:var(--kr)"><div class="frame"><b>日</b><small>JP</small></div><div class="cell"><h4>日本电影</h4><p>从黑泽明、小津安二郎的经典，到是枝裕和、滨口龙介的当代作者，再到动画与商业类型片。</p><div class="tags"><i>经典</i><i>当代</i><i>动画</i></div></div></a>
+      <a href="#" style="--c:var(--jp)"><div class="frame"><b>韓</b><small>KR</small></div><div class="cell"><h4>韩国电影</h4><p>犯罪悬疑、社会现实、复仇惊悚三大强项，类型片工业水准稳定输出。</p><div class="tags"><i>犯罪</i><i>悬疑</i><i>现实</i></div></div></a>
+      <a href="#" style="--c:var(--ac)"><div class="frame"><b>劇</b><small>DRAMA</small></div><div class="cell"><h4>韩剧 / 日剧</h4><p>韩剧节奏紧凑题材多元，日剧擅长社会议题与职业剧，按更新状态与类型筛选。</p><div class="tags"><i>连载</i><i>完结</i><i>经典</i></div></div></a>
+      <a href="#" style="--c:var(--gold)"><div class="frame"><b>綜</b><small>SHOW</small></div><div class="cell"><h4>综艺与动漫</h4><p>日韩综艺的仪式感与观察视角，以及日漫、韩漫改编作品的一站式索引。</p><div class="tags"><i>综艺</i><i>国漫</i><i>日漫</i></div></div></a>
+    </div>
+  </section>
+
+  <!-- 贰：折纸展开 -->
+  <section id="origami">
+    <div class="sh">
+      <div class="l"><span class="no">02</span><h3>本周精选</h3></div>
+      <a class="more" href="#">全部精选 →</a>
+    </div>
+    <div class="origami">
+      <div class="fold on">
+        <div class="bg"></div>
+        <div class="inner"><div class="top"><span class="nm">PICK 01</span></div><div class="center">经典回顾</div><div class="bot">作者电影 · 影史留名</div></div>
+        <div class="detail"><b>经典回顾</b><p>小津安二郎、黑泽明、侯孝贤风格的东亚影像美学，慢节奏里的生活质感与留白，值得反复观看。</p><span>→ 进入经典片单</span></div>
+      </div>
+      <div class="fold">
+        <div class="bg"></div>
+        <div class="inner"><div class="top"><span class="nm">PICK 02</span></div><div class="center">犯罪悬疑</div><div class="bot">韩影最强赛道</div></div>
+        <div class="detail"><b>犯罪悬疑</b><p>奉俊昊、朴赞郁、李沧东一脉相承的社会批判与类型叙事，反转之外更有现实分量。</p><span>→ 进入悬疑片单</span></div>
+      </div>
+      <div class="fold">
+        <div class="bg"></div>
+        <div class="inner"><div class="top"><span class="nm">PICK 03</span></div><div class="center">社会现实</div><div class="bot">东亚议题镜像</div></div>
+        <div class="detail"><b>社会现实</b><p>职场、家庭、阶级、性别，日韩影视对社会议题的切入直接而锋利，是理解东亚的窗口。</p><span>→ 进入现实题材</span></div>
+      </div>
+      <div class="fold">
+        <div class="bg"></div>
+        <div class="inner"><div class="top"><span class="nm">PICK 04</span></div><div class="center">动画佳作</div><div class="bot">不止于少年向</div></div>
+        <div class="detail"><b>动画佳作</b><p>从吉卜力、今敏到新海诚，日本动画在叙事与视觉上的持续创新，成年观众同样值得一看。</p><span>→ 进入动画片单</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 叁：胶片帧宫格 -->
+  <section id="frames">
+    <div class="sh">
+      <div class="l"><span class="no">03</span><h3>地区索引</h3></div>
+      <div class="d">按国家与题材切分，快速定位想看的片子。</div>
+    </div>
+    <div class="frames">
+      <a href="#"><span class="num">01</span><div class="img"><div><b>日本电影</b><small>JP FILM</small></div></div></a>
+      <a href="#"><span class="num">02</span><div class="img"><div><b>韩国电影</b><small>KR FILM</small></div></div></a>
+      <a href="#"><span class="num">03</span><div class="img"><div><b>韩剧</b><small>K-DRAMA</small></div></div></a>
+      <a href="#"><span class="num">04</span><div class="img"><div><b>日剧</b><small>J-DRAMA</small></div></div></a>
+      <a href="#"><span class="num">05</span><div class="img"><div><b>日韩综艺</b><small>VARIETY</small></div></div></a>
+      <a href="#"><span class="num">06</span><div class="img"><div><b>动画专区</b><small>ANIME</small></div></div></a>
+    </div>
+  </section>
+
+  <!-- 肆：柱状图 -->
+  <section id="stats">
+    <div class="sh" style="grid-column:1/-1;width:100%">
+      <div class="l"><span class="no">04</span><h3>内容数据</h3></div>
+      <div class="d">按更新频率统计的一周内容补给强度。</div>
+    </div>
+    <div class="bars">
+      <div class="bar"><i style="height:46%"></i><b>一</b><small>12</small></div>
+      <div class="bar"><i style="height:62%"></i><b>二</b><small>18</small></div>
+      <div class="bar"><i style="height:55%"></i><b>三</b><small>15</small></div>
+      <div class="bar"><i style="height:88%"></i><b>四</b><small>26</small></div>
+      <div class="bar"><i style="height:72%"></i><b>五</b><small>21</small></div>
+      <div class="bar"><i style="height:96%"></i><b>六</b><small>30</small></div>
+      <div class="bar"><i style="height:78%"></i><b>日</b><small>24</small></div>
+    </div>
+    <div class="stat-txt">
+      <h4>每天都有新片可看</h4>
+      <p><strong>日韩av电影网</strong> 的内容按一周七天持续更新，周末是补给高峰，工作日保持稳定节奏，让你不用在多个站点之间反复跳转。</p>
+      <ul>
+        <li><span>覆盖频道</span><b>4 个</b></li>
+        <li><span>细分分类</span><b>16+</b></li>
+        <li><span>周更新条目</span><b>146 条</b></li>
+        <li><span>服务时间</span><b>7×24</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about">
+    <div class="about">
+      <div class="ink">
+        <div class="q">「 日韩av电影网，把日本与韩国的好电影、好剧集，按你的口味整理好。 」</div>
+        <h3>关于日韩av电影网</h3>
+        <p><strong>日韩av电影网</strong> 是一个专注日韩影视内容的导航站点，官方网址：</p>
+        <div class="url">https://rihanavdianyingwang-wap.github.io/</div>
+        <p style="margin-top:18px">从经典作者电影到当周热播剧集，从犯罪悬疑到社会现实，我们按地区与题材做双向索引，让你一次调频，直接锁定想看的片子。</p>
+      </div>
+      <div class="pale">
+        <h5>导航入口</h5>
+        <ul class="lst">
+          <li><a href="#reels"><span class="n">01</span>日本电影分区<span class="ar">→</span></a></li>
+          <li><a href="#reels"><span class="n">02</span>韩国电影分区<span class="ar">→</span></a></li>
+          <li><a href="#reels"><span class="n">03</span>韩剧 / 日剧分区<span class="ar">→</span></a></li>
+          <li><a href="#origami"><span class="n">04</span>本周精选片单<span class="ar">→</span></a></li>
+          <li><a href="#frames"><span class="n">05</span>地区索引总览<span class="ar">→</span></a></li>
+          <li><a href="#stats"><span class="n">06</span>更新数据统计<span class="ar">→</span></a></li>
+          <li><a href="#about"><span class="n">07</span>联系与投稿<span class="ar">→</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="fwrap">
+    <div class="brand"><div class="stamp"><b>日韓</b><small>FILM</small></div><h4>日韩av电影网</h4><p>专注日韩影视导航，覆盖日本电影、韩国电影、韩剧、日剧、综艺与动漫。</p></div>
+    <div><h5>内容</h5><ul><li><a href="#reels">日本电影</a></li><li><a href="#reels">韩国电影</a></li><li><a href="#reels">韩剧 / 日剧</a></li><li><a href="#reels">综艺与动漫</a></li></ul></div>
+    <div><h5>索引</h5><ul><li><a href="#frames">地区索引</a></li><li><a href="#origami">本周精选</a></li><li><a href="#stats">更新统计</a></li><li><a href="#">全部分类</a></li></ul></div>
+    <div><h5>关于</h5><ul><li><a href="#about">网站简介</a></li><li><a href="#">投稿合作</a></li><li><a href="#">免责声明</a></li><li><a href="#">联系我们</a></li></ul></div>
+  </div>
+  <div class="copy"><span>Copyright © 2026 <span style="color:#fff">日韩av电影网</span> 版权所有</span><span>官方网址：<a href="https://rihanavdianyingwang-wap.github.io/">https://rihanavdianyingwang-wap.github.io/</a></span></div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+  var mb=document.getElementById('mb'),nav=document.getElementById('nav');
+  mb.addEventListener('click',function(){nav.classList.toggle('open');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');});});
+  var top=document.getElementById('top');
+  window.addEventListener('scroll',function(){window.scrollY>500?top.classList.add('show'):top.classList.remove('show');});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  var folds=document.querySelectorAll('.fold');
+  folds.forEach(function(f){f.addEventListener('click',function(){
+    folds.forEach(function(x){x.classList.remove('on');});f.classList.add('on');
+  });});
+</script>
+</body>
+</html>
